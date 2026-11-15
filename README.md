@@ -100,3 +100,9 @@ docker build -t getcart-storefront .
 ```
 
 The image holds every Brand. A container chooses one with `BRAND_ID`. See [docs/new-brand.md](docs/new-brand.md).
+
+## License
+
+Licensed under the [Apache License 2.0](LICENSE). See [NOTICE](NOTICE) for copyright and trademark details.
+
+This project is not affiliated with or endorsed by Vendure or Payload.
