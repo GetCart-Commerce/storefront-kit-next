@@ -1,0 +1,30 @@
+{
+    "name": "@getcart/storefront-design",
+    "version": "0.1.0",
+    "private": true,
+    "license": "Apache-2.0",
+    "type": "module",
+    "sideEffects": [
+        "*.css"
+    ],
+    "exports": {
+        ".": "./src/index.ts",
+        "./client": "./src/client.ts",
+        "./styles.css": "./src/styles.css"
+    },
+    "scripts": {
+        "typecheck": "tsc --noEmit -p tsconfig.json"
+    },
+    "dependencies": {
+        "@getcart/storefront-core": "workspace:^"
+    },
+    "peerDependencies": {
+        "next": "^16.4.0",
+        "react": "^19.3.0"
+    },
+    "devDependencies": {
+        "@types/react": "^19.3.0",
+        "next": "^16.4.6",
+        "react": "^19.3.1"
+    }
+}

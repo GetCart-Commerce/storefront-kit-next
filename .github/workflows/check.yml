@@ -1,0 +1,35 @@
+name: Check
+
+on:
+    pull_request:
+    push:
+        branches: [main]
+
+jobs:
+    check:
+        runs-on: ubuntu-latest
+        timeout-minutes: 20
+        steps:
+            - uses: actions/checkout@v4
+            - uses: pnpm/action-setup@v4
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 22.16.0
+                  cache: pnpm
+            - run: pnpm install --frozen-lockfile
+            # Generated GraphQL types must match the committed enterprise schema snapshot.
+            - run: pnpm gql:check
+            - run: pnpm typecheck
+            - run: pnpm lint
+            - run: pnpm format:check
+            # Unit tests, the no-CMS checkout flow and the package-boundary test.
+            - run: pnpm test
+            # One build, started once per example Brand, with no CMS configured.
+            - run: pnpm build
+            - run: pnpm --filter @getcart/storefront-app exec playwright install --with-deps chromium
+            - run: pnpm test:e2e
+            - uses: actions/upload-artifact@v4
+              if: failure()
+              with:
+                  name: playwright-report
+                  path: apps/storefront/playwright-report

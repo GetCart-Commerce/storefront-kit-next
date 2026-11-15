@@ -1,0 +1,15 @@
+{
+    "navigation": [
+        { "label": "Shop", "href": "/products" },
+        { "label": "Our story", "href": "/pages/story" }
+    ],
+    "footer": {
+        "note": "© Kanvas Studio",
+        "links": [{ "label": "Our story", "href": "/pages/story" }]
+    },
+    "seo": {
+        "titleTemplate": "%s — Kanvas",
+        "defaultTitle": "Kanvas Studio",
+        "description": "Considered clothing, made in small runs."
+    }
+}

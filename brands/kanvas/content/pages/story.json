@@ -1,0 +1,14 @@
+{
+    "slug": "story",
+    "title": "Our story",
+    "sections": [
+        {
+            "type": "rich-text",
+            "heading": "Our story",
+            "paragraphs": [
+                "Kanvas started as a two-person studio in Bandung.",
+                "Every piece is made in a small run, so nothing sits in a warehouse."
+            ]
+        }
+    ]
+}

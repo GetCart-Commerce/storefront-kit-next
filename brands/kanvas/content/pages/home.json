@@ -1,0 +1,14 @@
+{
+    "slug": "home",
+    "title": "Kanvas Studio",
+    "seo": { "title": "Kanvas Studio — small-run clothing" },
+    "sections": [
+        {
+            "type": "hero",
+            "heading": "Made in small runs",
+            "text": "Linen and batik pieces, cut and sewn in Bandung.",
+            "cta": { "label": "Shop the collection", "href": "/products" }
+        },
+        { "type": "product-grid", "heading": "New this season", "take": 4 }
+    ]
+}

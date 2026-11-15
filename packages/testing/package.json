@@ -1,0 +1,20 @@
+{
+    "name": "@getcart/storefront-testing",
+    "version": "0.1.0",
+    "private": true,
+    "license": "Apache-2.0",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.ts"
+    },
+    "scripts": {
+        "typecheck": "tsc --noEmit -p tsconfig.json",
+        "fake-api": "tsx src/serve.ts"
+    },
+    "dependencies": {
+        "graphql": "^16.14.2"
+    },
+    "devDependencies": {
+        "tsx": "^4.23.15"
+    }
+}

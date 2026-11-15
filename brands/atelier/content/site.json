@@ -1,0 +1,13 @@
+{
+    "announcement": "Gratis konsultasi ukuran lewat WhatsApp",
+    "navigation": [{ "label": "Produk", "href": "/products" }],
+    "footer": {
+        "note": "© Atelier Senja",
+        "links": [{ "label": "Produk", "href": "/products" }]
+    },
+    "seo": {
+        "titleTemplate": "%s · Atelier Senja",
+        "defaultTitle": "Atelier Senja",
+        "description": "Pakaian linen dan batik untuk keseharian."
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "plugins": [
+            {
+                "name": "gql.tada/ts-plugin",
+                "schema": "./schema/shop-api.graphql",
+                "tadaOutputLocation": "./packages/core/src/shop/graphql-env.d.ts"
+            }
+        ]
+    },
+    "include": []
+}

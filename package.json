@@ -1,0 +1,37 @@
+{
+    "name": "getcart-storefront",
+    "version": "0.1.0",
+    "private": true,
+    "license": "Apache-2.0",
+    "packageManager": "pnpm@10.24.0",
+    "engines": {
+        "node": ">=22.16.0 <23",
+        "pnpm": "10.24.0"
+    },
+    "scripts": {
+        "dev": "pnpm --filter @getcart/storefront-app dev",
+        "build": "pnpm --filter @getcart/storefront-app build",
+        "start": "pnpm --filter @getcart/storefront-app start",
+        "typecheck": "pnpm -r typecheck",
+        "lint": "eslint .",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "test": "vitest run",
+        "test:e2e": "pnpm --filter @getcart/storefront-app test:e2e",
+        "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test",
+        "gql:schema": "node scripts/update-schema.mjs",
+        "gql:types": "node node_modules/gql.tada/bin/cli.js generate-output",
+        "gql:check": "node node_modules/gql.tada/bin/cli.js generate-output && git diff --exit-code -- packages/core/src/shop/graphql-env.d.ts"
+    },
+    "devDependencies": {
+        "@0no-co/graphqlsp": "^1.18.0",
+        "@eslint/js": "^9.39.0",
+        "@types/node": "^22.16.0",
+        "eslint": "^9.39.0",
+        "gql.tada": "^1.11.4",
+        "prettier": "^3.9.10",
+        "typescript": "~5.9.3",
+        "typescript-eslint": "^8.72.2",
+        "vitest": "^4.0.0"
+    }
+}

@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+
+/* Scan the Default design and every Brand design for utility classes. */
+@source '../../../../packages/design/src';
+@source '../../../../brands';
+
+/* Theme tokens arrive at runtime as --gc-* custom properties from the Brand's configuration. */
+@theme inline {
+    --color-background: var(--gc-background);
+    --color-foreground: var(--gc-foreground);
+    --color-muted: var(--gc-muted);
+    --color-border: var(--gc-border);
+    --color-brand: var(--gc-brand);
+    --color-brand-foreground: var(--gc-brand-foreground);
+    --radius-brand: var(--gc-radius);
+    --font-sans: var(--gc-font-sans);
+    --font-display: var(--gc-font-display);
+}

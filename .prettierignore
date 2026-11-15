@@ -1,0 +1,8 @@
+node_modules
+.next
+pnpm-lock.yaml
+schema/shop-api.graphql
+packages/core/src/shop/graphql-env.d.ts
+playwright-report
+test-results
+next-env.d.ts
